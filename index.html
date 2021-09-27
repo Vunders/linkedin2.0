@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+  <link rel="stylesheet" href="style.css" id="stylesheet" />
+</head>
+
+<!---
+BEM
+    Block - main-menu
+    Elelement - main-menu__logo, main-menu__left, main-menu__right
+    Modifier main-menu__left--open
+-->
+
+
+<body>
+  <div class="top-nav">
+    <div class="main-menu">
+      <div class="main-menu__left">
+        <a href="#" class="main-menu__logo">
+          <svg viewBox="0 0 34 34" fill="#0077B5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M30.4583 0.708328H3.54159C1.97678 0.708328 0.708252 1.97685 0.708252 3.54166V30.4583C0.708252 32.0231 1.97678 33.2917 3.54159 33.2917H30.4583C32.0231 33.2917 33.2916 32.0231 33.2916 30.4583V3.54166C33.2916 1.97685 32.0231 0.708328 30.4583 0.708328Z"
+              fill="white" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0 2.84034C0 1.27166 1.27079 0 2.84034 0H31.1597C32.7283 0 34 1.27079 34 2.84034V31.1597C34 32.7283 32.7292 34 31.1597 34H2.84034C1.27166 34 0 32.7292 0 31.1597V2.84034ZM13.4583 12.9625H18.0625V15.2759C18.7262 13.9457 20.4269 12.75 22.9819 12.75C27.8793 12.75 29.0417 15.3977 29.0417 20.2562V29.2542H24.0833V21.3626C24.0833 18.5959 23.4196 17.0354 21.7317 17.0354C19.3906 17.0354 18.4167 18.7177 18.4167 21.3626V29.2542H13.4583V12.9625ZM4.95833 29.0417H9.91667V12.75H4.95833V29.0417ZM10.625 7.4375C10.625 9.19771 9.19771 10.625 7.4375 10.625C5.67729 10.625 4.25 9.19771 4.25 7.4375C4.25 5.67729 5.67729 4.25 7.4375 4.25C9.19771 4.25 10.625 5.67729 10.625 7.4375Z" />
+          </svg>
+        </a>
+
+        <div class="main-menu__search">
+          <form action="">
+            <input type="text" class="main-menu__search-bar" placeholder="Search" name="search-bar" />
+            <button type="submit" class="search-button">
+              <svg class="search-icon" viewBox="0 0 11 12" fill="none" stroke="#2D3E49"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="4.5" cy="4.5" r="4" stroke="inherit" />
+                <path d="M7 7.5L10.5 11" stroke="inherit" stroke-linecap="round" />
+                </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <nav class="main-menu__right">
+        <a href="#" title="Home"><span class="icon icon-home"></span><span class="text">Home</span></a>
+        <a href="#" title="My Network"><span class="icon icon-network"></span><span class="text">My Network</span></a>
+        <a href="#" title="Jobs"><span class="icon icon-jobs"></span><span class="text">Jobs</span></a>
+        <a href="#" title="Messages"><span class="icon icon-messages"></span><span class="text">Messages</span></a>
+        <a href="#" title="Notification"><span class="icon icon-notifications"></span><span
+            class="text">Notification</span></a>
+        <a href="#" title="Profile">
+          <span class="icon">
+            <span class="avatar">V</span>
+        </span>
+          <span class="text"> Me <i class="icon-arrow"></i> </span>
+        </a>
+        <div class="vertical-line"></div>
+        <a href="#" class="last-item" title="Work">
+          <span class="icon icon-menu"></span>
+          <span class="text">Work <i class="icon-arrow"></i> </span>
+        </a>
+      </nav>
+      <a href="#" class="dropdown" onclick="triggerNav('.main-menu__right')">
+        <svg class="dropdown_icon" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z" />
+        </svg>
+      </a>
+    </div>
+        </div>
+
+
+        <main>
+          <div>
+              <div class="card"></div>
+          </div>
+          <div class="content">
+              <div class="card post">
+                  <div class="post__heading">
+                      <div class="post__author">
+                          <div class="post__author-image"></div>
+                          <b class="post__author-name">Porfile name</b>
+                          <div>623 fallowers</div>
+                          <div class="post__history">
+                              <span class="post__created">1w</span> •
+                              <svg style="vertical-align: text-top;" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0ZM7 1.84C7.3358 1.84072 7.67072 1.87421 8 1.94V3.59L6.29 5.29L6 5.59V6.59L3.09 3.67C3.5696 3.09916 4.16787 2.63973 4.84313 2.32368C5.5184 2.00764 6.25444 1.84258 7 1.84ZM8 12.06V10.38L7.45 10.1L6 9.38V8H9.09L9.8 8.72L8.32 12L8 12.06ZM1.84 7C1.84636 6.12631 2.07707 5.26891 2.51 4.51L5 7V9.38C5.00056 9.56467 5.05225 9.74557 5.14933 9.90267C5.24641 10.0598 5.38509 10.1869 5.55 10.27L7 11V12.16C5.6323 12.1574 4.32137 11.6129 3.35425 10.6458C2.38714 9.67864 1.84265 8.36771 1.84 7ZM9.69 11.39L10.78 9C10.8433 8.86133 10.8629 8.70666 10.8361 8.55659C10.8093 8.40652 10.7374 8.26818 10.63 8.16L9.79 7.32C9.70024 7.22307 9.59217 7.14488 9.47202 7.08996C9.35188 7.03503 9.22203 7.00446 9.09 7H7V6L8.71 4.29C8.89475 4.10374 8.9989 3.85234 9 3.59V2.24C9.87872 2.60371 10.6393 3.20407 11.1971 3.9743C11.755 4.74453 12.0882 5.65442 12.1597 6.60274C12.2312 7.55107 12.0382 8.50064 11.6022 9.34581C11.1662 10.191 10.5042 10.8986 9.69 11.39Z" fill="#707070"/>
+                              </svg>
+                          </div>
+                      </div>
+  
+                      <a href="#" class="post__options">
+                          <svg width="20" height="4" viewBox="0 0 20 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H4V4H0V0ZM8 0H12V4H8V0ZM20 0H16V4H20V0Z" fill="#707070"/>
+                          </svg>
+                      </a>
+                  </div>
+                  <div class="post__content">
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when.</p>
+                      <a href="#">https://bit.ly/2RANHvl</a>
+                  </div>
+                  <img class="post__image" src="images/image.jpeg" alt="">
+              </div>
+              <div class="card"></div>
+          </div>
+          <div>
+              <div class="card"></div>
+          </div>
+      </main>
+  
+
+  <button onclick="changeThemeColor()" style="position:fixed; bottom: 5px; left: 5px;">
+    Change Theme colors
+  </button>
+
+
+<script> 
+ let design = 'light'
+
+ function changeThemeColor($design){
+ if(design=='light'){
+            design='dark'
+          }
+          else{
+            design='light';
+          }
+  document.querySelector('#stylesheet').setAttribute('href', design + '-style.css');
+} </script>
+
+
+  <script>  
+        function triggerNav(selector) {
+          
+      document.querySelector(selector).classList.toggle('main-menu__right--open');
+    }
+  </script>
+
+
+</body>
+
+</html>
